@@ -1,6 +1,6 @@
 package com.manville.form.model;
 
-public class login {
+public class Login {
 	
 	private String username;
 	private String password;
@@ -16,6 +16,12 @@ public class login {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	
+	public String toString()
+	{
+		return "username: " + username + " Password: " + password;
 	}
 	
 	
