@@ -1,4 +1,4 @@
-package com.manville.form.model;
+package com.gamecenter.form.model;
 
 public class Login {
 	

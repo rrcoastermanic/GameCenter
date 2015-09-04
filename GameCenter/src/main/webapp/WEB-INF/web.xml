@@ -5,6 +5,8 @@
  
 	<display-name>Archetype Created Web Application</display-name>
  
+
+ 
 	<servlet>
 		<servlet-name>spring-web</servlet-name>
 		<servlet-class>
@@ -12,7 +14,7 @@
 		</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
- 
+
 	<servlet-mapping>
 		<servlet-name>spring-web</servlet-name>
 		<url-pattern>/</url-pattern>

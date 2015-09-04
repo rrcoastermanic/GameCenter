@@ -1,4 +1,4 @@
-package com.manville.config;
+package com.gamecenter.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,8 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.manville.web","com.manville.form.model"})
+@ComponentScan({"com.gamecenter.form.controller","com.gamecenter.form.model","com.gamecenter.form.validator",
+	"com.gamecenter.service","com.gamecenter.data.dao"})
 public class SpringWebConfig extends WebMvcConfigurerAdapter {
 	
 	@Override
@@ -32,7 +33,7 @@ public class SpringWebConfig extends WebMvcConfigurerAdapter {
 	}
 	
 	@Bean
-	public ResourceBundleMessageSource mesageSource()
+	public ResourceBundleMessageSource messageSource()
 	{
 		ResourceBundleMessageSource rb = new ResourceBundleMessageSource();
 		rb.setBasenames(new String[]{"messages/messages","messages/validation"});
