@@ -69,6 +69,6 @@ public class LoginController {
 		logger.debug(model.toString());
 		
 		System.out.println("index");
-		return "redirect:/login";
+		return "index";
 	}
 }

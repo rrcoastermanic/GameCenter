@@ -15,4 +15,6 @@ public interface UsersDAO {
 	public void deleteUser(Users user);
 	
 	public Users attemptLogin(Users user);
+	
+	public int getUsernameCount(Users user);
 }

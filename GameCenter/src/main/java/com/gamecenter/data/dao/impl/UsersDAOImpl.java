@@ -92,5 +92,18 @@ public class UsersDAOImpl implements UsersDAO {
 		
 	}
 
+	@Override
+	public int getUsernameCount(Users user) {
+		// TODO Auto-generated method stub
+		String queryStr = "Select count(userid) from Users where username = :username";
+		
+		Query query = sessionFactory.getCurrentSession().createQuery(queryStr);
+		query.setParameter("username", user.getUsername());
+		
+		Integer count = (Integer) query.uniqueResult();
+		
+		return count.intValue();
+	}
+
 
 }

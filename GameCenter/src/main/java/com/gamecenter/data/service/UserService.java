@@ -9,4 +9,6 @@ public interface UserService
 {
 	
 	public boolean attemptLogin(Login form);
+	
+	public boolean checkUserExists(String username);
 }

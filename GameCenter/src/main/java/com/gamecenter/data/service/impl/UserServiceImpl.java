@@ -34,5 +34,20 @@ public class UserServiceImpl implements UserService
 		
 		return false;
 	}
+
+	@Override
+	public boolean checkUserExists(String username) {
+		
+		Users users = new Users();
+		users.setUsername(username);
+		
+		int numUsers = usersDAO.getUsernameCount(users);
+		
+		if(numUsers > 0)
+		{
+			return true;
+		}
+		return false;
+	}
 	
 }
